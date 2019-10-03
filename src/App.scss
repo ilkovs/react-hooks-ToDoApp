@@ -1,0 +1,51 @@
+div {
+  margin: 0 20px;
+
+  p {
+    font: 600 18px 'Open Sans';
+    color: #303030;
+  
+    span {
+      color: red;
+    }
+  }
+  
+  button {
+    border-radius: 0;
+    padding: 12px;
+    font: 600 14px 'Open Sans';
+    background: green;
+    color: #fff;
+    margin: 0 10px 0 0;
+  }
+  
+  input {
+    padding: 10px;
+    font: 400 16px 'Open Sans';
+  }
+  
+  .title {
+    text-decoration: underline;
+  }
+  
+  ul {
+    list-style: none;
+  
+    li {
+      list-style: circle;
+      padding: 10px 0;
+
+      span {
+        background: red;
+        border-radius: 50%;
+        margin: 0 10px;
+        font-weight: 600;
+        padding: 3px;
+        color: #fff;
+        font-size: 10px;
+        display: inline;
+        cursor: pointer;
+      }
+    }
+  }
+}
