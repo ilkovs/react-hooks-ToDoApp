@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './App.scss'
+import Clock from 'react-live-clock';
 
 function App() {
-  const [count, setCount] = useState(0)
   const [newToDo, setNewToDo] = useState('')
   const [toDos, addToDo] = useState([])
 
@@ -15,6 +15,10 @@ function App() {
   function addNewToDo(e) {
     e.preventDefault()
     addToDo([...toDos, newToDo])
+    //clear the field once to-do is submitted
+    let button = e.target
+    let currentInput = button.previousElementSibling
+    currentInput.value = '';
   }
 
   function removeToDo(e) {
@@ -26,14 +30,14 @@ function App() {
     addToDo([...toDos])
   }
 
+
   return (
+
     <div>
-      <p>Click count: <span>{count}</span></p>
-      <button onClick={() => setCount(count + 1)}>Click</button>
-      <button onClick={() => setCount(0)}>Reset Counter</button>
-      <p className="title">To Do list:</p>
-      <input type="text" placeholder="type here..." onChange={getUserInput} />
-      <button onClick={addNewToDo}>Add a To Do</button>
+      <p className="title">Daily To-Do List:</p>
+      <p className="time">The Time: <Clock format={'HH:mm:ss'} ticking={true} className="clock"/></p>
+      <input type="text" placeholder="Add a To-Do..." onChange={getUserInput} />
+      <button onClick={addNewToDo}>Save</button>
       <p>{toDos.length > 0 ? `You have ${toDos.length} ${toDos.length < 2 ? 'To Do' : "To Do's"} in your list.` : ''}</p>
       <ul>
         {toDos.map((singleToDo, id) => (

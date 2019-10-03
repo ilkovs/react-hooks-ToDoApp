@@ -1,5 +1,8 @@
 div {
   margin: 0 20px;
+  text-align: center;
+  max-width: 300px;
+  margin: auto;
 
   p {
     font: 600 18px 'Open Sans';
@@ -17,15 +20,21 @@ div {
     background: green;
     color: #fff;
     margin: 0 10px 0 0;
+    border: 0;
+    text-transform: uppercase;
+    height: 40px;
   }
   
   input {
     padding: 10px;
     font: 400 16px 'Open Sans';
+    border: 1px solid green;
+    border-right: 0;
   }
   
   .title {
     text-decoration: underline;
+    text-align: center;
   }
   
   ul {
@@ -34,6 +43,7 @@ div {
     li {
       list-style: circle;
       padding: 10px 0;
+      text-align: left;
 
       span {
         background: red;
@@ -46,6 +56,16 @@ div {
         display: inline;
         cursor: pointer;
       }
+    }
+  }
+
+  .time {
+    font: 400 16px 'Open Sans';
+    text-transform: uppercase;
+
+    .clock {
+      color: red;
+      font-weight: 600;
     }
   }
 }
