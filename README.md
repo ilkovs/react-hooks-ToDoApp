@@ -1,1 +1,1 @@
-## Practicing React Hooks by creating simple counter and to-do app
+## Practicing React Hooks by creating a To-Do app
